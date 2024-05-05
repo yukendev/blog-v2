@@ -1,3 +1,4 @@
+"use client";
 import { github_link, x_link } from "@/common/external-links/const";
 import { Button, Menu, rem } from "@mantine/core";
 import {

@@ -1,3 +1,5 @@
+import { Header } from "@/common/header";
+
 export default function ArticleListPage() {
-  return <h1>Hello, Next.js!</h1>;
+  return <Header />;
 }
