@@ -20,6 +20,7 @@ export const BlogCard = ({ title, date, tags, category }: Props) => (
         borderLeft: `medium solid var(--mantine-color-${categoryColors[category]}-filled)`,
       },
     }}
+    h="100%"
   >
     <Group>
       <CategoryBadge category={category} size={40} radius="md" />

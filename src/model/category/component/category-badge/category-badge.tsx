@@ -1,4 +1,4 @@
-import { CategoryIcon } from "@/model/category/component/category-icon/category-icon";
+import { CategoryIcon } from "@/model/category/component/category-icon";
 import { categoryColors } from "@/model/category/const";
 import type { Category } from "@/model/category/type";
 import { Card, Center, type MantineRadius } from "@mantine/core";
