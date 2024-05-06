@@ -1,7 +1,8 @@
 import type { BlogArticle } from "@/model/blog-article/type";
 import { CategoryBadge } from "@/model/category/component/category-badge/category-badge";
 import { categoryColors, categoryColorsCssVars } from "@/model/category/const";
-import { Badge, Card, Group, Space, Text } from "@mantine/core";
+import { TagLinkBadge } from "@/model/tag/components/tag-link-badge";
+import { Card, Group, Space, Text } from "@mantine/core";
 import Link from "next/link";
 
 type Props = Pick<BlogArticle, "title" | "date" | "tags" | "category" | "slug">;
@@ -44,18 +45,12 @@ export const BlogCard = ({ title, date, tags, category, slug }: Props) => {
       <Space h="md" />
       <Group>
         {tags.map((tag) => (
-          <Badge
-            key={tag}
+          <TagLinkBadge
+            tag={tag}
             color={categoryColors[category]}
-            component={Link}
-            href={`/tags/${tag}`}
-            tt="none"
+            key={tag}
             className="cursor-pointer hover:scale-110 duration-100"
-          >
-            <Text fw={700} size="sm">
-              {tag}
-            </Text>
-          </Badge>
+          />
         ))}
       </Group>
     </Card>

@@ -8,9 +8,10 @@ type Props = {
   category: Category;
   size: number;
   radius: MantineRadius;
+  className?: string;
 };
 
-export const CategoryBadge = ({ category, size, radius }: Props) => (
+export const CategoryBadge = ({ category, size, radius, className }: Props) => (
   <Card
     radius={radius}
     shadow="sm"
@@ -18,7 +19,7 @@ export const CategoryBadge = ({ category, size, radius }: Props) => (
     w={size}
     h={size}
     bg={categoryColors[category]}
-    className="cursor-pointer hover:-translate-y-1 hover:scale-110 duration-100"
+    className={className}
   >
     <Center w="100%" h="100%">
       <CategoryIcon category={category} size={size * 0.6} color="white" />

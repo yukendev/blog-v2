@@ -12,7 +12,12 @@ type Props = {
 export const CategoryLinkWithTitle = ({ category }: Props) => (
   <Stack gap={2} align="center">
     <Link href={`/categories/${category}`} className="no-underline">
-      <CategoryBadge category={category} size={60} radius={30} />
+      <CategoryBadge
+        category={category}
+        size={60}
+        radius={30}
+        className="cursor-pointer hover:-translate-y-1 hover:scale-110 duration-100"
+      />
       <Text
         ta="center"
         className={bm_hannna_font.className}
