@@ -1,8 +1,4 @@
-import { setProjectAnnotations } from "@storybook/react";
-
 import "@testing-library/jest-dom/vitest";
-
-import preview from "@/../.storybook/preview";
 
 import { vi } from "vitest";
 
@@ -30,7 +26,3 @@ class ResizeObserver {
   disconnect() {}
 }
 window.ResizeObserver = ResizeObserver;
-
-// Storybookのstoryをvitestでテストするための設定
-// 参考: https://storybook.js.org/docs/writing-tests/stories-in-unit-tests#configure
-setProjectAnnotations(preview);
