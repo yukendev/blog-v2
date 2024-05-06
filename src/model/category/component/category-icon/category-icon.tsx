@@ -14,17 +14,23 @@ export const CategoryIcon = ({ category, size, color }: Props) => {
       <IconDevicesPc
         style={{ width: rem(size), height: rem(size) }}
         color={color}
+        aria-label="techカテゴリーのアイコン"
       />
     );
   if (category === "book")
     return (
-      <IconBook style={{ width: rem(size), height: rem(size) }} color={color} />
+      <IconBook
+        style={{ width: rem(size), height: rem(size) }}
+        color={color}
+        aria-label="bookカテゴリーのアイコン"
+      />
     );
   if (category === "note")
     return (
       <IconPencil
         style={{ width: rem(size), height: rem(size) }}
         color={color}
+        aria-label="noteカテゴリーのアイコン"
       />
     );
 };

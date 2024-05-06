@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {} from "@storybook/test";
 import { CategoryIcon } from "./category-icon";
 
 const meta: Meta<typeof CategoryIcon> = {
