@@ -1,5 +1,5 @@
+import { getRandomMantineColor, getRandomTag } from "@/test/utils";
 import type { Meta, StoryObj } from "@storybook/react";
-import {} from "@storybook/test";
 import { TagLinkBadge } from "./tag-link-badge";
 
 const meta: Meta<typeof TagLinkBadge> = {
@@ -9,9 +9,9 @@ const meta: Meta<typeof TagLinkBadge> = {
 export default meta;
 type Story = StoryObj<typeof TagLinkBadge>;
 
-export const Tech: Story = {
+export const Default: Story = {
   args: {
-    tag: "AWS",
-    color: "red",
+    tag: getRandomTag(),
+    color: getRandomMantineColor(),
   },
 };
