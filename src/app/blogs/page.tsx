@@ -2,7 +2,7 @@
 import { Header } from "@/common/header";
 import { BlogCard } from "@/model/blog-article/components/blog-card/blog-card";
 import type { BlogArticle } from "@/model/blog-article/type";
-import { CategoryBadge } from "@/model/category/component/category-badge";
+import { CategoryLinkWithTitle } from "@/model/category/component/category-link-with-title";
 import { Container, Grid, Group } from "@mantine/core";
 
 const blogList: BlogArticle[] = [
@@ -54,9 +54,9 @@ export default function ArticleListPage() {
       <Header />
       <Container>
         <Group my={50}>
-          <CategoryBadge category="tech" size={60} radius={30} />
-          <CategoryBadge category="book" size={60} radius={30} />
-          <CategoryBadge category="note" size={60} radius={30} />
+          <CategoryLinkWithTitle category="tech" />
+          <CategoryLinkWithTitle category="book" />
+          <CategoryLinkWithTitle category="note" />
         </Group>
         <Grid>
           {blogList.map((blog) => (
@@ -66,6 +66,7 @@ export default function ArticleListPage() {
                 category={blog.category}
                 date={blog.date}
                 tags={blog.tags}
+                slug={blog.slug}
               />
             </Grid.Col>
           ))}
