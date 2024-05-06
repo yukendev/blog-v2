@@ -14,7 +14,7 @@ export const TagLinkBadge = ({ tag, color, className }: Props) => (
     component={Link}
     href={`/tags/${tag}`}
     tt="none"
-    className={className}
+    className={`cursor-pointer ${className}`}
   >
     <Text fw={700} size="sm">
       {tag}

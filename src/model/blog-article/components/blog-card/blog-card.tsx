@@ -49,7 +49,7 @@ export const BlogCard = ({ title, date, tags, category, slug }: Props) => {
             tag={tag}
             color={categoryColors[category]}
             key={tag}
-            className="cursor-pointer hover:scale-110 duration-100"
+            className="hover:scale-110 duration-100"
           />
         ))}
       </Group>
