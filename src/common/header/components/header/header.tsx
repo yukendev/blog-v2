@@ -14,14 +14,16 @@ export const Header = () => {
     <header>
       <Container py={20}>
         <Group justify="space-between">
-          <Text
-            fw={900}
-            c="p-orange.4"
-            className={bm_hannna_font.className}
-            size={rem(36)}
-          >
-            yuken.dev
-          </Text>
+          <Link href="/" className="no-underline">
+            <Text
+              fw={900}
+              c="p-orange.4"
+              className={bm_hannna_font.className}
+              size={rem(36)}
+            >
+              yuken.dev
+            </Text>
+          </Link>
 
           {/* ページ幅がxs以上の場合 */}
           <Group visibleFrom="xs">
@@ -31,6 +33,7 @@ export const Header = () => {
                 <IconHome
                   style={{ width: rem(ICON_SIZE), height: rem(ICON_SIZE) }}
                   color={ICON_COLOR}
+                  className="hover:-translate-y-0.5 duration-100"
                 />
               </Center>
             </Link>
@@ -41,15 +44,24 @@ export const Header = () => {
                 <IconUserQuestion
                   style={{ width: rem(ICON_SIZE), height: rem(ICON_SIZE) }}
                   color={ICON_COLOR}
+                  className="hover:-translate-y-0.5 duration-100"
                 />
               </Center>
             </Link>
 
             {/* Xの外部リンク */}
-            <XLinkIcon size={ICON_SIZE} color={ICON_COLOR} />
+            <XLinkIcon
+              size={ICON_SIZE}
+              color={ICON_COLOR}
+              className="hover:-translate-y-0.5 duration-100"
+            />
 
             {/* GitHubの外部リンク */}
-            <GithubLinkIcon size={ICON_SIZE} color={ICON_COLOR} />
+            <GithubLinkIcon
+              size={ICON_SIZE}
+              color={ICON_COLOR}
+              className="hover:-translate-y-0.5 duration-100"
+            />
           </Group>
 
           {/* ページ幅がxs未満の場合 */}

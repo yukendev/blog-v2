@@ -18,6 +18,7 @@ export const CategoryBadge = ({ category, size, radius }: Props) => (
     w={size}
     h={size}
     bg={categoryColors[category]}
+    className="cursor-pointer hover:-translate-y-1 hover:scale-110 duration-100"
   >
     <Center w="100%" h="100%">
       <CategoryIcon category={category} size={size * 0.6} color="white" />
