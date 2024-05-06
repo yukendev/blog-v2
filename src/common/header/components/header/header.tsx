@@ -1,9 +1,9 @@
 import { GithubLinkIcon } from "@/common/external-links/components/github-link-icon";
 import { XLinkIcon } from "@/common/external-links/components/x-link-icon";
+import { bm_hannna_font } from "@/common/fonts";
 import { ToggleMenu } from "@/common/header/components/toggle-menu";
-import { Box, Center, Container, Group, rem } from "@mantine/core";
+import { Box, Center, Container, Group, Text, rem } from "@mantine/core";
 import { IconHome, IconUserQuestion } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const ICON_SIZE = 30;
@@ -12,14 +12,16 @@ const ICON_COLOR = "black";
 export const Header = () => {
   return (
     <header>
-      <Container>
+      <Container bg="p-pale-green.2">
         <Group justify="space-between">
-          <Image
-            src="/Title.svg"
-            alt="ブログタイトル"
-            width="200"
-            height="45"
-          />
+          <Text
+            fw={900}
+            c="p-orange.4"
+            className={bm_hannna_font.className}
+            size={rem(36)}
+          >
+            yuken.dev
+          </Text>
 
           {/* ページ幅がxs以上の場合 */}
           <Group visibleFrom="xs">
