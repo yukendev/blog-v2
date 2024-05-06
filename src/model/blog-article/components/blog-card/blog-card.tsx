@@ -12,9 +12,7 @@ export const BlogCard = ({ title, date, tags, category }: Props) => (
     withBorder
     radius="md"
     padding="lg"
-    component={Link}
-    href=""
-    target="_blank"
+    component="article"
     styles={{
       root: {
         borderLeft: `medium solid var(${categoryColorsCssVars[category]})`,
@@ -27,9 +25,11 @@ export const BlogCard = ({ title, date, tags, category }: Props) => (
       <Text size="sm">{date}</Text>
     </Group>
     <Space h="sm" />
-    <Text fw={700} size="lg">
-      {title}
-    </Text>
+    <Link href="" target="_blank" className="no-underline">
+      <Text fw={700} size="lg" c="black">
+        {title}
+      </Text>
+    </Link>
     <Space h="md" />
     <Group>
       {tags.map((tag) => (
