@@ -16,7 +16,7 @@ const ICON_COLOR = "black";
 export const ToggleMenu = () => (
   <Menu>
     <Menu.Target>
-      <Button size="compact-sm" bg="black">
+      <Button size="compact-sm" bg="p-orange.4">
         <IconCaretDown />
       </Button>
     </Menu.Target>

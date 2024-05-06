@@ -1,6 +1,6 @@
 import type { BlogArticle } from "@/model/blog-article/type";
 import { CategoryBadge } from "@/model/category/component/category-badge/category-badge";
-import { categoryColors } from "@/model/category/const";
+import { categoryColors, categoryColorsCssVars } from "@/model/category/const";
 import { Badge, Card, Group, Space, Text } from "@mantine/core";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ export const BlogCard = ({ title, date, tags, category }: Props) => (
     target="_blank"
     styles={{
       root: {
-        borderLeft: `medium solid var(--mantine-color-${categoryColors[category]}-filled)`,
+        borderLeft: `medium solid var(${categoryColorsCssVars[category]})`,
       },
     }}
     h="100%"

@@ -12,7 +12,7 @@ const ICON_COLOR = "black";
 export const Header = () => {
   return (
     <header>
-      <Container bg="p-pale-green.2">
+      <Container>
         <Group justify="space-between">
           <Text
             fw={900}

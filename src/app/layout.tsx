@@ -1,5 +1,5 @@
 import { inter } from "@/common/fonts";
-import { ColorSchemeScript } from "@mantine/core";
+import { ColorSchemeScript, Container } from "@mantine/core";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 
@@ -24,8 +24,12 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body className={inter.className} style={{ height: "100vh" }}>
+        <Providers>
+          <Container fluid h="100%" bg="p-pale-green.2">
+            {children}
+          </Container>
+        </Providers>
       </body>
     </html>
   );
