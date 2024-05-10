@@ -20,6 +20,7 @@
     "@mantine/hooks": "^7.8.0",
     "@tabler/icons": "^3.3.0",
     "@tabler/icons-react": "^3.3.0",
+    "gray-matter": "^4.0.3",
     "next": "14.2.1",
     "postcss": "^8.4.38",
     "postcss-preset-mantine": "^1.14.4",
@@ -59,6 +60,8 @@
     "vitest": "^1.5.0"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
