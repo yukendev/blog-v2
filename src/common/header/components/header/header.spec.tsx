@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { Header } from "./header";
 
 describe("<Header/>", () => {
-  it("should be rendered 4 links", async () => {
+  it("should be rendered 4 links", () => {
     render(<Header />);
 
     const links = screen.getAllByRole("link");

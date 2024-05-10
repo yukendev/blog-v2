@@ -1,6 +1,6 @@
+import { github_link } from "@/common/external-links/const";
 import { Center, rem } from "@mantine/core";
 import { IconBrandGithub } from "@tabler/icons-react";
-import { github_link } from "../../const";
 
 type Props = {
   size: number;
