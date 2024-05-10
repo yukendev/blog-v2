@@ -30,7 +30,9 @@ export const BlogCard = ({ title, date, tags, category, slug }: Props) => {
     >
       <Group>
         <CategoryBadge category={category} size={40} radius="md" />
-        <Text size="sm">{date}</Text>
+        <Text fw={500} size="sm">
+          <time dateTime={date}>{date}</time>
+        </Text>
       </Group>
       <Space h="sm" />
       <Link
@@ -43,7 +45,7 @@ export const BlogCard = ({ title, date, tags, category, slug }: Props) => {
         </Text>
       </Link>
       <Space h="md" />
-      <Group>
+      <Group data-testid="blogarticle-taglist-container">
         {tags.map((tag) => (
           <TagLinkBadge
             tag={tag}
