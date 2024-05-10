@@ -26,3 +26,19 @@ class ResizeObserver {
   disconnect() {}
 }
 window.ResizeObserver = ResizeObserver;
+
+vi.mock("next/font/google", () => ({
+  Inter: () => ({
+    style: {
+      fontFamily: "mocked",
+    },
+  }),
+}));
+
+vi.mock("next/font/local", () => ({
+  default: () => ({
+    style: {
+      fontFamily: "mocked",
+    },
+  }),
+}));
