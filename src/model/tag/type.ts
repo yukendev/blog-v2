@@ -1,3 +1,6 @@
-import type { tags } from "./const";
+import { z } from "zod";
+import { tags } from "./const";
 
-export type Tag = (typeof tags)[number];
+export const tagSchema = z.enum(tags);
+
+export type Tag = z.infer<typeof tagSchema>;
