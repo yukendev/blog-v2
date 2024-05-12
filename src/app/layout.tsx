@@ -1,6 +1,6 @@
-import { ColorSchemeScript } from "@mantine/core";
+import { inter } from "@/common/fonts";
+import { ColorSchemeScript, Container } from "@mantine/core";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 
 // 1. mantine ui stylesheet
@@ -8,8 +8,6 @@ import "@mantine/core/styles.css";
 
 // 2. tailwindcss stylesshieet
 import "@/tailwind.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +24,12 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body className={inter.className} style={{ height: "100vh" }}>
+        <Providers>
+          <Container fluid h="100%" bg="p-pale-green.2">
+            {children}
+          </Container>
+        </Providers>
       </body>
     </html>
   );
