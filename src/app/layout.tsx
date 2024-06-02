@@ -1,8 +1,8 @@
 import { inter } from "@/common/fonts";
+import { Header } from "@/common/header";
 import { ColorSchemeScript, Container } from "@mantine/core";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
-
 // 1. mantine ui stylesheet
 import "@mantine/core/styles.css";
 
@@ -26,7 +26,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className} style={{ height: "100vh" }}>
         <Providers>
-          <Container fluid h="100%" bg="p-pale-green.2">
+          <Container fluid bg="p-pale-green.2">
+            <Header />
             {children}
           </Container>
         </Providers>
