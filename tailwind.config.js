@@ -27,6 +27,10 @@ module.exports = {
 
         // Mantine UIのその他の色をパレットに追加
         ...mantineColorsForTailwind,
+
+        "category-tech": "var(--mantine-color-p-navy-9)",
+        "category-book": "var(--mantine-color-p-yellow-5)",
+        "category-note": "var(--mantine-color-p-green-9)",
       },
       // メディアクエリのブレイクポイントをMantine UIと合わせる
       // https://mantine.dev/styles/responsive/
